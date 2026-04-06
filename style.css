@@ -1,0 +1,89 @@
+/* CSS СТИЛИ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    padding: 10px;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 320px;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+#display {
+    width: 100%;
+    height: 80px;
+    font-size: 2.5rem;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+    border-radius: 15px;
+    border: none;
+    background-color: #333333;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #444444;
+}
+
+/* Цветовые акценты */
+.btn-clear { background-color: #ff3b30; } /* Красный */
+.btn-del { background-color: #505050; }   /* Серый */
+.btn-operator { background-color: #ff9f0a; } /* Оранжевый */
+
+.btn-equal { 
+    grid-column: span 3; /* Растягиваем на 3 колонки */
+    background-color: #34c759; /* Зеленый */
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 350px) {
+    .calculator {
+        padding: 15px;
+        border-radius: 20px;
+    }
+    button {
+        height: 55px;
+    }
+}

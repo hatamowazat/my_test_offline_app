@@ -1,0 +1,12 @@
+{
+    "name": "my-offline-app",
+    "version": "1.0.0",
+    "scripts": {
+        "build": "echo 'No build step needed'"
+    },
+    "dependencies": {
+        "@capasitor/android": "^5.0.0",
+        "@capasitor/cli": "^5.0.0",
+        "@capasitor/core": "^5.0.0"
+    }
+}
